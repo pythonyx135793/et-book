@@ -18,6 +18,7 @@ from fontTools.ttLib import TTFont
 
 SIZES = list(range(8, 49)) + [64, 96]
 FAMILIES = ["et-book-roman-line-figures", "et-book-roman-old-style-figures"]
+COVERAGE_LEVELS = [32, 128, 224]
 
 
 def capture(path):
@@ -34,18 +35,30 @@ def capture(path):
             face.load_glyph(index, freetype.FT_LOAD_NO_AUTOHINT | freetype.FT_LOAD_TARGET_NORMAL)
             face.glyph.render(freetype.FT_RENDER_MODE_NORMAL)
             glyph, bitmap = face.glyph, face.glyph.bitmap
+            pixels = bytes(bitmap.buffer)
+            row_maxima = [max(pixels[y * bitmap.pitch:y * bitmap.pitch + bitmap.width], default=0) for y in range(bitmap.rows)]
+            # FreeType's allocation bounds can include entirely transparent
+            # rows or 1/255 coverage fringes. Measure the visible serif edge
+            # at three coverage levels, while retaining the full bitmap and
+            # raw bounds for the strict unrelated-glyph comparison below.
+            coverage_tops = {}
+            for level in COVERAGE_LEVELS:
+                first = next((y for y, maximum in enumerate(row_maxima) if maximum >= level), None)
+                coverage_tops[level] = None if first is None else glyph.bitmap_top - first
             results[size, name] = {
                 "advance": [glyph.advance.x, glyph.advance.y],
                 "origin": [glyph.bitmap_left, glyph.bitmap_top],
                 "box": [bitmap.width, bitmap.rows],
                 "pitch": bitmap.pitch,
-                "bitmap_sha256": hashlib.sha256(bytes(bitmap.buffer)).hexdigest(),
+                "bitmap_sha256": hashlib.sha256(pixels).hexdigest(),
+                "coverage_tops": coverage_tops,
             }
     return results
 
 
 def compare(original_root, fixed_root):
     report = {"platform": platform.platform(), "freetype": freetype.version(), "sizes": SIZES, "results": []}
+    print(json.dumps({"platform": report["platform"], "freetype": report["freetype"], "coverage_levels": COVERAGE_LEVELS}), flush=True)
     for interpreter in [35, 40]:
         version = ctypes.c_uint(interpreter)
         code = freetype.FT_Property_Set(freetype.get_handle(), b"truetype", b"interpreter-version", ctypes.byref(version))
@@ -66,11 +79,12 @@ def compare(original_root, fixed_root):
                     changed.append(key[0])
             controls = []
             for size in [12, 17, 22]:
-                old_w, old_v = before[size, "w"]["origin"][1], before[size, "v"]["origin"][1]
-                new_w, new_v = after[size, "w"]["origin"][1], after[size, "v"]["origin"][1]
-                if old_w == old_v or new_w != new_v:
-                    raise AssertionError((interpreter, family, size, old_w, old_v, new_w, new_v))
-                controls.append({"size": size, "original_w_top": old_w, "v_top": old_v, "fixed_w_top": new_w})
+                for level in COVERAGE_LEVELS:
+                    old_w, old_v = before[size, "w"]["coverage_tops"][level], before[size, "v"]["coverage_tops"][level]
+                    new_w, new_v = after[size, "w"]["coverage_tops"][level], after[size, "v"]["coverage_tops"][level]
+                    if old_w is None or old_v is None or new_w is None or new_v is None or old_w == old_v or new_w != new_v:
+                        raise AssertionError((interpreter, family, size, level, old_w, old_v, new_w, new_v))
+                    controls.append({"size": size, "coverage_level": level, "original_w_top": old_w, "v_top": old_v, "fixed_w_top": new_w, "raw_bitmap_tops": {"original_w": before[size, "w"]["origin"][1], "fixed_w": after[size, "w"]["origin"][1], "v": before[size, "v"]["origin"][1]}})
             for metric in ["box", "origin", "advance"]:
                 if before[20, "w"][metric] != after[20, "w"][metric]:
                     raise AssertionError((interpreter, family, "20px geometry", metric))

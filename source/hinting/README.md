@@ -46,6 +46,11 @@ python source/hinting/test_raster.py ../et-book-original .
 
 This exercises native TrueType interpreters 35 and 40 at 8–48, 64 and 96
 pixels, including every defined glyph and the original x-height failures.
+FreeType bitmap allocation bounds may contain transparent rows or tiny
+antialias fringes, so x-height is compared at coverage levels 32, 128 and
+224 out of 255. All three levels must reproduce the original mismatch
+and align after the repair. Raw bitmap bounds and hashes are retained;
+unrelated glyphs still require exact pixel and metric equality.
 The repaired `w` can have different antialias coverage even where its
 dimensions were already correct, including 20 pixels. Other glyphs and
 all advances must remain identical. These checks do not establish every
