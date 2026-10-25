@@ -1,0 +1,67 @@
+{
+  "base": "24d3a3bbfc880095d3df2b9e9d60d05819138e89",
+  "commit": "70dc08310c5bbe065af66f381b34bc9b35cd0684",
+  "tree": "e623a3072864870d3813080531d10eb103d123eb",
+  "files": [
+    {
+      "path": "et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot",
+      "git_blob": "71aaa43a0e7eae9f063ad8e4e4f2a7e7caf36f6c",
+      "sha256": "130364b66f732dee0a878e89400794a313072e2b384e4706eab3d63da356eb5c",
+      "bytes": 71898
+    },
+    {
+      "path": "et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf",
+      "git_blob": "611e5bbb6ec5ab5603699f3ebd08dc5b47705d0b",
+      "sha256": "b88776fc803ba4fbbd96a02b0b4d043f97428c36247e8fdf0c767e5bd84afaa3",
+      "bytes": 71688
+    },
+    {
+      "path": "et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff",
+      "git_blob": "44de3a99909b3d5dd550f4d7b98fc31c19892eec",
+      "sha256": "9a16319da5e8dd5a1d6234b20a3ac7a2dbb58d6acb69aa3c36cd0f6e6324450f",
+      "bytes": 44024
+    },
+    {
+      "path": "et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot",
+      "git_blob": "f1437aee51f909d66fdcf5cbc88890e20c3ef481",
+      "sha256": "08110bd5c1dc5d3524a7dd589fd66f2e0c9305c9381d1bf656b908b7c3d5faa5",
+      "bytes": 71594
+    },
+    {
+      "path": "et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf",
+      "git_blob": "60377a13aa1f54628dd3f9cfdac3461fdd640120",
+      "sha256": "b953bb2babd036e1d03aa604007b7b2283cbc32db2bdc5d789f762d916ef4578",
+      "bytes": 71380
+    },
+    {
+      "path": "et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff",
+      "git_blob": "7d29c8277ff253b4a93ae0425b699136f5fd2fab",
+      "sha256": "2a4e400115c45b8a1a287225a232bfcbe9b1fb0e5deb4e75422e39542dbc1cbe",
+      "bytes": 43908
+    },
+    {
+      "path": "source/hinting/README.md",
+      "git_blob": "15b09c9f4023d43b20ae1fa0201b62954a9dac31",
+      "sha256": "a36d5c5e9963cdd17d63afd500149f1b9ffc2030b4718c2a10e945ee127de739",
+      "bytes": 3088
+    },
+    {
+      "path": "source/hinting/fix_roman_w.py",
+      "git_blob": "c32e0967ac95c287343bbd1596d25020af4cc01c",
+      "sha256": "273c2106c91b16eb709e1d249d01012b4451f3b0b8a07a4fb18ad19b2ab2d744",
+      "bytes": 5089
+    },
+    {
+      "path": "source/hinting/test_fonts.py",
+      "git_blob": "3343d7859325fc43d03e81e812e155a8b4a11789",
+      "sha256": "8f103bd65536b4377504ab6932371a21c7298c378856430794112f5c744fdba6",
+      "bytes": 5771
+    },
+    {
+      "path": "source/hinting/test_raster.py",
+      "git_blob": "956dedb3c131e6e4d0f9415a7b84192912989ed1",
+      "sha256": "d64a91408ab4ff958089315616b967e5cede537aef03a31d17e35eb8b17b540c",
+      "bytes": 5412
+    }
+  ]
+}

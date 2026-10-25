@@ -1,0 +1,58 @@
+[
+  {
+    "request": "GET /et-book-roman-line-figures-ttf-fixed.ttf HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "b88776fc803ba4fbbd96a02b0b4d043f97428c36247e8fdf0c767e5bd84afaa3"
+  },
+  {
+    "request": "GET /et-book-roman-line-figures-ttf-original.ttf HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "48a4c0e333ea34f975702a965db80c29bc831f215c3606f47b3fe14f53d0f638"
+  },
+  {
+    "request": "GET /et-book-roman-line-figures-woff-original.woff HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "be0f2c061cd8c57b38b5edd8c03dac72ca7d87fb5c3f7f5c32ed72dede39a601"
+  },
+  {
+    "request": "GET /et-book-roman-line-figures-woff-fixed.woff HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "9a16319da5e8dd5a1d6234b20a3ac7a2dbb58d6acb69aa3c36cd0f6e6324450f"
+  },
+  {
+    "request": "GET /et-book-roman-old-style-figures-ttf-original.ttf HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "cd229daa847df81e286943e4da3895df6e186b9379e71d487521fad56cf6a1c0"
+  },
+  {
+    "request": "GET /et-book-roman-old-style-figures-woff-original.woff HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "58d154747bfa14725671c667c034066242c19039b9e90180ef46ca5c984a1b05"
+  },
+  {
+    "request": "GET /et-book-roman-old-style-figures-ttf-fixed.ttf HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "b953bb2babd036e1d03aa604007b7b2283cbc32db2bdc5d789f762d916ef4578"
+  },
+  {
+    "request": "GET /et-book-roman-old-style-figures-woff-fixed.woff HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "platform_hint": "\"Windows\"",
+    "sha256": "2a4e400115c45b8a1a287225a232bfcbe9b1fb0e5deb4e75422e39542dbc1cbe"
+  }
+]

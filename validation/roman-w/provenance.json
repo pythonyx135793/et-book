@@ -1,0 +1,32 @@
+{
+  "application_commit": "70dc08310c5bbe065af66f381b34bc9b35cd0684",
+  "application_tree": "e623a3072864870d3813080531d10eb103d123eb",
+  "original_commit": "24d3a3bbfc880095d3df2b9e9d60d05819138e89",
+  "font_bytes_unchanged_since": "72b467f659d844f5436664243d4e26f168842120",
+  "native_windows": {
+    "platform": "Windows 10.0.19045",
+    "python": "3.12.14",
+    "method": "Process-private AddFontMemResourceEx; GetFontData verifies exact glyf bytes at every size; GetGlyphOutlineW GGO_GRAY8_BITMAP glyph-index rasters; private font removed afterward.",
+    "scripts_sha256": {
+      "windows-gdi.py": "da40da54ee362cbd0ab607ef8e8d733832cb33c2522bdf3702a6a403931d16da",
+      "check-windows.py": "7158e7d8023f4178e52821ebc9b546145b051e9966c2629e924c98bfb23062e4",
+      "render-overlays.py": "9a38c4e47581930cc1358cddef1a9cd8df74794c84bb6eddffcf2c25505995fb"
+    },
+    "fonttools": "4.67.0",
+    "pillow": "13.0.0",
+    "global_font_installation": false
+  },
+  "images": "Existing native-resolution PNGs and browser screenshots, copied without resampling or editing.",
+  "browser": "Windows Chromium 155 User-Agent and platform hint from passive local HTTP requests; exact TTF/WOFF GET200 hashes retained. Screenshots show original/fixed/live overlays around17px.",
+  "first_linux_failure": {
+    "run": 40147759507,
+    "job": 121032666228,
+    "cause": "Test compared allocation bounds, including transparent rows and 1-2/255 antialias fringes. Revised visible-edge measurement requires all three coverage thresholds to reproduce the original mismatch and pass fixed. Font bytes and strict non-w checks unchanged."
+  },
+  "limits": [
+    "20px w geometry and advance are unchanged, but antialias coverage differs.",
+    "No all-browser, all-font-setting, or legacy IE/EOT runtime claim.",
+    "No global font installation; no production deployment.",
+    "The Linux workflow downloads hash-verified official wheels; it does not claim OS network isolation."
+  ]
+}

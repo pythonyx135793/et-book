@@ -1,0 +1,3 @@
+# Preserve exact evidence bytes and keep raw job logs out of whitespace diffs.
+* -text whitespace=cr-at-eol
+*.log -diff -whitespace

@@ -1,0 +1,252 @@
+﻿2026-10-25T00:42:50.6326605Z Current runner version: '2.338.0'
+2026-10-25T00:42:50.6360719Z ##[group]Runner Image Provisioner
+2026-10-25T00:42:50.6362361Z Hosted Compute Agent
+2026-10-25T00:42:50.6363430Z Version: 20261021.618
+2026-10-25T00:42:50.6364564Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-25T00:42:50.6365824Z Build Date: 2026-10-21T00:45:21Z
+2026-10-25T00:42:50.6367067Z Worker ID: {cf236c54-5880-470f-be68-ad1fe2d9aa00}
+2026-10-25T00:42:50.6368298Z Region: eastus
+2026-10-25T00:42:50.6369236Z Cloud: Azure
+2026-10-25T00:42:50.6370272Z ##[endgroup]
+2026-10-25T00:42:50.6372842Z ##[group]Operating System
+2026-10-25T00:42:50.6374367Z Ubuntu
+2026-10-25T00:42:50.6375354Z 24.04.5
+2026-10-25T00:42:50.6376215Z LTS
+2026-10-25T00:42:50.6377234Z ##[endgroup]
+2026-10-25T00:42:50.6378177Z ##[group]Runner Image
+2026-10-25T00:42:50.6379316Z Image: ubuntu-24.04
+2026-10-25T00:42:50.6380309Z Version: 20261012.334.1
+2026-10-25T00:42:50.6382785Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-25T00:42:50.6385512Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-25T00:42:50.6387310Z ##[endgroup]
+2026-10-25T00:42:50.6389148Z ##[group]GITHUB_TOKEN Permissions
+2026-10-25T00:42:50.6392378Z Contents: read
+2026-10-25T00:42:50.6393345Z Metadata: read
+2026-10-25T00:42:50.6394381Z ##[endgroup]
+2026-10-25T00:42:50.6397325Z Secret source: Actions
+2026-10-25T00:42:50.6399023Z Cache mode: write
+2026-10-25T00:42:50.6400428Z Prepare workflow directory
+2026-10-25T00:42:50.6959064Z Prepare all required actions
+2026-10-25T00:42:50.7030363Z Getting action download info
+2026-10-25T00:42:50.9006493Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-10-25T00:42:51.1244791Z Complete job name: linux-raster
+2026-10-25T00:42:51.2250209Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-10-25T00:42:51.2251293Z with:
+2026-10-25T00:42:51.2252150Z   ref: 52f0b70f12d3c084355120533a9d046df4bffab0
+2026-10-25T00:42:51.2252779Z   fetch-depth: 3
+2026-10-25T00:42:51.2253263Z   persist-credentials: false
+2026-10-25T00:42:51.2253826Z   repository: pythonyx135793/et-book
+2026-10-25T00:42:51.2257543Z   token: ***
+2026-10-25T00:42:51.2258060Z   ssh-strict: true
+2026-10-25T00:42:51.2258578Z   ssh-user: git
+2026-10-25T00:42:51.2259081Z   clean: true
+2026-10-25T00:42:51.2259611Z   sparse-checkout-cone-mode: true
+2026-10-25T00:42:51.2260227Z   fetch-tags: false
+2026-10-25T00:42:51.2260708Z   show-progress: true
+2026-10-25T00:42:51.2261221Z   lfs: false
+2026-10-25T00:42:51.2261954Z   submodules: false
+2026-10-25T00:42:51.2262443Z   set-safe-directory: true
+2026-10-25T00:42:51.2263251Z env:
+2026-10-25T00:42:51.2263714Z   PYTHONDONTWRITEBYTECODE: 1
+2026-10-25T00:42:51.2264250Z   PYTHONNOUSERSITE: 1
+2026-10-25T00:42:51.2264787Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+2026-10-25T00:42:51.2265325Z ##[endgroup]
+2026-10-25T00:42:51.3289687Z Syncing repository: pythonyx135793/et-book
+2026-10-25T00:42:51.3292730Z ##[group]Getting Git version info
+2026-10-25T00:42:51.3293878Z Working directory is '/home/runner/work/et-book/et-book'
+2026-10-25T00:42:51.3295679Z [command]/usr/bin/git version
+2026-10-25T00:42:51.3366950Z git version 2.55.0
+2026-10-25T00:42:51.3405157Z ##[endgroup]
+2026-10-25T00:42:51.3415833Z Temporarily overriding HOME='/home/runner/work/_temp/93d1a28d-d825-49c4-985b-be5f75b5d3d5' before making global git config changes
+2026-10-25T00:42:51.3417476Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-25T00:42:51.3421988Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/et-book/et-book
+2026-10-25T00:42:51.3480049Z Deleting the contents of '/home/runner/work/et-book/et-book'
+2026-10-25T00:42:51.3498768Z ##[group]Initializing the repository
+2026-10-25T00:42:51.3500164Z [command]/usr/bin/git init /home/runner/work/et-book/et-book
+2026-10-25T00:42:51.3606482Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-25T00:42:51.3608901Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-25T00:42:51.3610713Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-25T00:42:51.3612207Z hint: call:
+2026-10-25T00:42:51.3612694Z hint:
+2026-10-25T00:42:51.3613463Z hint: 	git config --global init.defaultBranch <name>
+2026-10-25T00:42:51.3614725Z hint:
+2026-10-25T00:42:51.3615969Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-25T00:42:51.3617081Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-25T00:42:51.3617943Z hint:
+2026-10-25T00:42:51.3618438Z hint: 	git branch -m <name>
+2026-10-25T00:42:51.3619134Z hint:
+2026-10-25T00:42:51.3620077Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-25T00:42:51.3621362Z Initialized empty Git repository in /home/runner/work/et-book/et-book/.git/
+2026-10-25T00:42:51.3624000Z [command]/usr/bin/git remote add origin https://github.com/pythonyx135793/et-book
+2026-10-25T00:42:51.3674394Z ##[endgroup]
+2026-10-25T00:42:51.3675262Z ##[group]Disabling automatic garbage collection
+2026-10-25T00:42:51.3678693Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-25T00:42:51.3711169Z ##[endgroup]
+2026-10-25T00:42:51.3712602Z ##[group]Setting up auth
+2026-10-25T00:42:51.3720354Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-25T00:42:51.3783412Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-25T00:42:51.4143980Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-25T00:42:51.4180542Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-25T00:42:51.4409492Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-25T00:42:51.4452914Z ##[endgroup]
+2026-10-25T00:42:51.4454365Z ##[group]Fetching the repository
+2026-10-25T00:42:51.4463829Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=3 origin 52f0b70f12d3c084355120533a9d046df4bffab0
+2026-10-25T00:42:51.8260911Z From https://github.com/pythonyx135793/et-book
+2026-10-25T00:42:51.8263087Z  * branch            52f0b70f12d3c084355120533a9d046df4bffab0 -> FETCH_HEAD
+2026-10-25T00:42:51.8267437Z ##[endgroup]
+2026-10-25T00:42:51.8268939Z ##[group]Determining the checkout info
+2026-10-25T00:42:51.8270740Z ##[endgroup]
+2026-10-25T00:42:51.8278123Z [command]/usr/bin/git sparse-checkout disable
+2026-10-25T00:42:51.8335482Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-25T00:42:51.8367930Z ##[group]Checking out the ref
+2026-10-25T00:42:51.8375100Z [command]/usr/bin/git checkout --progress --force 52f0b70f12d3c084355120533a9d046df4bffab0
+2026-10-25T00:42:51.8588982Z Note: switching to '52f0b70f12d3c084355120533a9d046df4bffab0'.
+2026-10-25T00:42:51.8590017Z 
+2026-10-25T00:42:51.8590639Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-25T00:42:51.8592934Z changes and commit them, and you can discard any commits you make in this
+2026-10-25T00:42:51.8594846Z state without impacting any branches by switching back to a branch.
+2026-10-25T00:42:51.8595931Z 
+2026-10-25T00:42:51.8596665Z If you want to create a new branch to retain commits you create, you may
+2026-10-25T00:42:51.8598047Z do so (now or later) by using -c with the switch command. Example:
+2026-10-25T00:42:51.8598665Z 
+2026-10-25T00:42:51.8598963Z   git switch -c <new-branch-name>
+2026-10-25T00:42:51.8599369Z 
+2026-10-25T00:42:51.8599628Z Or undo this operation with:
+2026-10-25T00:42:51.8600087Z 
+2026-10-25T00:42:51.8600826Z   git switch -
+2026-10-25T00:42:51.8601392Z 
+2026-10-25T00:42:51.8602274Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-25T00:42:51.8602988Z 
+2026-10-25T00:42:51.8603437Z HEAD is now at 52f0b70 Document the pinned FontTools Python requirement
+2026-10-25T00:42:51.8605408Z ##[endgroup]
+2026-10-25T00:42:51.8655498Z [command]/usr/bin/git log -1 --format=%H
+2026-10-25T00:42:51.8683028Z 52f0b70f12d3c084355120533a9d046df4bffab0
+2026-10-25T00:42:51.8693308Z ##[group]Removing auth
+2026-10-25T00:42:51.8697078Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-25T00:42:51.8733684Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-25T00:42:51.8958560Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-25T00:42:51.8987385Z http.https://github.com/.extraheader
+2026-10-25T00:42:51.8995729Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-25T00:42:51.9030906Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-25T00:42:51.9246123Z ##[endgroup]
+2026-10-25T00:42:51.9460906Z ##[group]Run set -euo pipefail
+2026-10-25T00:42:51.9462010Z [36;1mset -euo pipefail[0m
+2026-10-25T00:42:51.9462854Z [36;1mtest "$(git rev-parse HEAD)" = 52f0b70f12d3c084355120533a9d046df4bffab0[0m
+2026-10-25T00:42:51.9463945Z [36;1mtest "$(git rev-parse HEAD^{tree})" = d4147ec16b604b5a3363cf17ace03250bced4281[0m
+2026-10-25T00:42:51.9464830Z [36;1mgit status --porcelain[0m
+2026-10-25T00:42:51.9465407Z [36;1mgit diff --check[0m
+2026-10-25T00:42:51.9465959Z [36;1mpython3 --version[0m
+2026-10-25T00:42:51.9466512Z [36;1muname -a[0m
+2026-10-25T00:42:51.9467390Z [36;1msha256sum source/hinting/* et-book/et-book-roman-{line,old-style}-figures/*.{ttf,woff,eot}[0m
+2026-10-25T00:42:51.9468359Z [36;1mpython3 - <<'PY'[0m
+2026-10-25T00:42:51.9468923Z [36;1mfrom pathlib import Path[0m
+2026-10-25T00:42:51.9469620Z [36;1mimport hashlib, os, subprocess, urllib.request[0m
+2026-10-25T00:42:51.9470470Z [36;1mroot = Path(os.environ['RUNNER_TEMP']) / 'etbook-proof'[0m
+2026-10-25T00:42:51.9471243Z [36;1mroot.mkdir()[0m
+2026-10-25T00:42:51.9472071Z [36;1mwheels = root / 'wheels'[0m
+2026-10-25T00:42:51.9472664Z [36;1mwheels.mkdir()[0m
+2026-10-25T00:42:51.9473194Z [36;1msources = [[0m
+2026-10-25T00:42:51.9474894Z [36;1m    ('https://files.pythonhosted.org/packages/3d/61/4161946319472aaa9b897bd18ad5108a5b10f5ebaa503d921a001ac4fff9/fonttools-4.67.0-py3-none-any.whl', '4304f03ed7f4ba000a8dcc941ad854bfa52e2f3b6112b8f099b6f431cf98e701'),[0m
+2026-10-25T00:42:51.9478319Z [36;1m    ('https://files.pythonhosted.org/packages/b6/36/853cad240ec63e21a37a512ee19c896b655ce1772d803a3dd80fccfe63fe/freetype_py-2.5.1-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl', '289b443547e03a4f85302e3ac91376838e0d11636050166662a4f75e3087ed0b'),[0m
+2026-10-25T00:42:51.9480541Z [36;1m][0m
+2026-10-25T00:42:51.9481042Z [36;1mfor url, expected in sources:[0m
+2026-10-25T00:42:51.9482022Z [36;1m    data = urllib.request.urlopen(url, timeout=30).read()[0m
+2026-10-25T00:42:51.9482901Z [36;1m    assert hashlib.sha256(data).hexdigest() == expected[0m
+2026-10-25T00:42:51.9483691Z [36;1m    target = wheels / url.rsplit('/', 1)[1][0m
+2026-10-25T00:42:51.9484373Z [36;1m    target.write_bytes(data)[0m
+2026-10-25T00:42:51.9485111Z [36;1m    print('Verified official wheel', target.name, expected)[0m
+2026-10-25T00:42:51.9485874Z [36;1mbaseline = root / 'original'[0m
+2026-10-25T00:42:51.9486790Z [36;1mfor family in ['et-book-roman-line-figures', 'et-book-roman-old-style-figures']:[0m
+2026-10-25T00:42:51.9488018Z [36;1m    for extension in ['ttf', 'woff', 'eot']:[0m
+2026-10-25T00:42:51.9489261Z [36;1m        relative = f'et-book/{family}/{family}.{extension}'[0m
+2026-10-25T00:42:51.9490458Z [36;1m        data = subprocess.check_output(['git', 'show', '24d3a3bbfc880095d3df2b9e9d60d05819138e89:' + relative])[0m
+2026-10-25T00:42:51.9491816Z [36;1m        target = baseline / relative[0m
+2026-10-25T00:42:51.9492628Z [36;1m        target.parent.mkdir(parents=True, exist_ok=True)[0m
+2026-10-25T00:42:51.9493415Z [36;1m        target.write_bytes(data)[0m
+2026-10-25T00:42:51.9494017Z [36;1mPY[0m
+2026-10-25T00:42:51.9494598Z [36;1mpython3 -m venv "$RUNNER_TEMP/etbook-proof/venv"[0m
+2026-10-25T00:42:51.9495992Z [36;1m"$RUNNER_TEMP/etbook-proof/venv/bin/python" -m pip --isolated install --no-index --no-deps --no-cache-dir "$RUNNER_TEMP/etbook-proof/wheels/"*.whl[0m
+2026-10-25T00:42:51.9743684Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-25T00:42:51.9744697Z env:
+2026-10-25T00:42:51.9745330Z   PYTHONDONTWRITEBYTECODE: 1
+2026-10-25T00:42:51.9746130Z   PYTHONNOUSERSITE: 1
+2026-10-25T00:42:51.9746844Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+2026-10-25T00:42:51.9747626Z ##[endgroup]
+2026-10-25T00:42:52.0139186Z Python 3.12.3
+2026-10-25T00:42:52.0151028Z Linux runnervmtai0g 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+2026-10-25T00:42:52.0173100Z 7001a6dc87702f8f4be0d7d30d150a26d39322f91046ca21eae4265f3c937c98  source/hinting/README.md
+2026-10-25T00:42:52.0175462Z 273c2106c91b16eb709e1d249d01012b4451f3b0b8a07a4fb18ad19b2ab2d744  source/hinting/fix_roman_w.py
+2026-10-25T00:42:52.0177659Z 8f103bd65536b4377504ab6932371a21c7298c378856430794112f5c744fdba6  source/hinting/test_fonts.py
+2026-10-25T00:42:52.0180641Z 5dc67754c37e5529e91add8bf6c0996e82fdfc861de7921c40b8a2f580259cc6  source/hinting/test_raster.py
+2026-10-25T00:42:52.0183151Z b88776fc803ba4fbbd96a02b0b4d043f97428c36247e8fdf0c767e5bd84afaa3  et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf
+2026-10-25T00:42:52.0185296Z 9a16319da5e8dd5a1d6234b20a3ac7a2dbb58d6acb69aa3c36cd0f6e6324450f  et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff
+2026-10-25T00:42:52.0187203Z 130364b66f732dee0a878e89400794a313072e2b384e4706eab3d63da356eb5c  et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot
+2026-10-25T00:42:52.0189166Z b953bb2babd036e1d03aa604007b7b2283cbc32db2bdc5d789f762d916ef4578  et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf
+2026-10-25T00:42:52.0191204Z 2a4e400115c45b8a1a287225a232bfcbe9b1fb0e5deb4e75422e39542dbc1cbe  et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff
+2026-10-25T00:42:52.0193527Z 08110bd5c1dc5d3524a7dd589fd66f2e0c9305c9381d1bf656b908b7c3d5faa5  et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot
+2026-10-25T00:42:52.2574967Z Verified official wheel fonttools-4.67.0-py3-none-any.whl 4304f03ed7f4ba000a8dcc941ad854bfa52e2f3b6112b8f099b6f431cf98e701
+2026-10-25T00:42:55.5443579Z Verified official wheel freetype_py-2.5.1-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl 289b443547e03a4f85302e3ac91376838e0d11636050166662a4f75e3087ed0b
+2026-10-25T00:42:55.5446536Z Processing /home/runner/work/_temp/etbook-proof/wheels/fonttools-4.67.0-py3-none-any.whl
+2026-10-25T00:42:55.5555837Z Processing /home/runner/work/_temp/etbook-proof/wheels/freetype_py-2.5.1-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+2026-10-25T00:42:55.5628906Z Installing collected packages: freetype-py, fonttools
+2026-10-25T00:42:56.3760589Z Successfully installed fonttools-4.67.0 freetype-py-2.5.1
+2026-10-25T00:42:56.4242154Z ##[group]Run set -euo pipefail
+2026-10-25T00:42:56.4242596Z [36;1mset -euo pipefail[0m
+2026-10-25T00:42:56.4243236Z [36;1m"$RUNNER_TEMP/etbook-proof/venv/bin/python" -I -B source/hinting/test_fonts.py "$RUNNER_TEMP/etbook-proof/original" .[0m
+2026-10-25T00:42:56.4310566Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-25T00:42:56.4311227Z env:
+2026-10-25T00:42:56.4311770Z   PYTHONDONTWRITEBYTECODE: 1
+2026-10-25T00:42:56.4312131Z   PYTHONNOUSERSITE: 1
+2026-10-25T00:42:56.4312452Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+2026-10-25T00:42:56.4312791Z ##[endgroup]
+2026-10-25T00:42:56.5333310Z test_eot_metadata_and_exact_ttf_payload (__main__.FontPreservation.test_eot_metadata_and_exact_ttf_payload) ... ok
+2026-10-25T00:42:56.8686183Z test_only_w_instructions_change (__main__.FontPreservation.test_only_w_instructions_change) ... ok
+2026-10-25T00:42:56.8691917Z test_original_identity (__main__.FontPreservation.test_original_identity) ... ok
+2026-10-25T00:42:56.8710380Z test_other_tables_are_identical (__main__.FontPreservation.test_other_tables_are_identical) ... ok
+2026-10-25T00:42:56.9243491Z test_rebuild_is_byte_reproducible (__main__.FontPreservation.test_rebuild_is_byte_reproducible) ... ok
+2026-10-25T00:42:56.9245209Z test_refuses_in_place_rebuild (__main__.FontPreservation.test_refuses_in_place_rebuild) ... ok
+2026-10-25T00:42:56.9262610Z test_woff_matches_ttf_tables (__main__.FontPreservation.test_woff_matches_ttf_tables) ... ok
+2026-10-25T00:42:56.9268219Z test_wrong_input_rejected_without_outputs (__main__.FontPreservation.test_wrong_input_rejected_without_outputs) ... ok
+2026-10-25T00:42:56.9282993Z test_x_height_anchor_and_original_serif_cvt (__main__.FontPreservation.test_x_height_anchor_and_original_serif_cvt) ... ok
+2026-10-25T00:42:56.9285069Z b88776fc803ba4fbbd96a02b0b4d043f97428c36247e8fdf0c767e5bd84afaa3 /tmp/etbook-rebuild-zv2zs1vk/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf
+2026-10-25T00:42:56.9287188Z 9a16319da5e8dd5a1d6234b20a3ac7a2dbb58d6acb69aa3c36cd0f6e6324450f /tmp/etbook-rebuild-zv2zs1vk/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff
+2026-10-25T00:42:56.9289301Z 130364b66f732dee0a878e89400794a313072e2b384e4706eab3d63da356eb5c /tmp/etbook-rebuild-zv2zs1vk/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot
+2026-10-25T00:42:56.9291681Z b953bb2babd036e1d03aa604007b7b2283cbc32db2bdc5d789f762d916ef4578 /tmp/etbook-rebuild-zv2zs1vk/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf
+2026-10-25T00:42:56.9293866Z 2a4e400115c45b8a1a287225a232bfcbe9b1fb0e5deb4e75422e39542dbc1cbe /tmp/etbook-rebuild-zv2zs1vk/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff
+2026-10-25T00:42:56.9295947Z 08110bd5c1dc5d3524a7dd589fd66f2e0c9305c9381d1bf656b908b7c3d5faa5 /tmp/etbook-rebuild-zv2zs1vk/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot
+2026-10-25T00:42:56.9297367Z 
+2026-10-25T00:42:56.9297982Z ----------------------------------------------------------------------
+2026-10-25T00:42:56.9298836Z Ran 9 tests in 0.396s
+2026-10-25T00:42:56.9299090Z 
+2026-10-25T00:42:56.9299237Z OK
+2026-10-25T00:42:56.9526767Z ##[group]Run set -euo pipefail
+2026-10-25T00:42:56.9527109Z [36;1mset -euo pipefail[0m
+2026-10-25T00:42:56.9527669Z [36;1m"$RUNNER_TEMP/etbook-proof/venv/bin/python" -I -B source/hinting/test_raster.py "$RUNNER_TEMP/etbook-proof/original" .[0m
+2026-10-25T00:42:56.9528273Z [36;1mgit diff --exit-code[0m
+2026-10-25T00:42:56.9528561Z [36;1mtest -z "$(git status --porcelain)"[0m
+2026-10-25T00:42:56.9592246Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-25T00:42:56.9592639Z env:
+2026-10-25T00:42:56.9592878Z   PYTHONDONTWRITEBYTECODE: 1
+2026-10-25T00:42:56.9593175Z   PYTHONNOUSERSITE: 1
+2026-10-25T00:42:56.9593440Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+2026-10-25T00:42:56.9593730Z ##[endgroup]
+2026-10-25T00:42:58.2042794Z Traceback (most recent call last):
+2026-10-25T00:42:58.2043754Z   File "/home/runner/work/et-book/et-book/source/hinting/test_raster.py", line 85, in <module>
+2026-10-25T00:42:58.2044601Z     compare(Path(sys.argv[1]), Path(sys.argv[2]))
+2026-10-25T00:42:58.2052849Z   File "/home/runner/work/et-book/et-book/source/hinting/test_raster.py", line 72, in compare
+2026-10-25T00:42:58.2072752Z     raise AssertionError((interpreter, family, size, old_w, old_v, new_w, new_v))
+2026-10-25T00:42:58.2083043Z AssertionError: (35, 'et-book-roman-line-figures', 12, 7, 5, 6, 5)
+2026-10-25T00:42:58.2252804Z ##[error]Process completed with exit code 1.
+2026-10-25T00:42:58.2385223Z Post job cleanup.
+2026-10-25T00:42:58.3245980Z [command]/usr/bin/git version
+2026-10-25T00:42:58.3293195Z git version 2.55.0
+2026-10-25T00:42:58.3337368Z Temporarily overriding HOME='/home/runner/work/_temp/ee1c6c66-d53b-40dc-956e-4d48de70958a' before making global git config changes
+2026-10-25T00:42:58.3338726Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-25T00:42:58.3343173Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/et-book/et-book
+2026-10-25T00:42:58.3381505Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-25T00:42:58.3419162Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-25T00:42:58.3684754Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-25T00:42:58.3723900Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-25T00:42:58.4171174Z Cleaning up orphan processes
+2026-10-25T00:42:58.4548466Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

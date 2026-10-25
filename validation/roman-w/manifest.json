@@ -1,0 +1,90 @@
+{
+  "application_commit": "70dc08310c5bbe065af66f381b34bc9b35cd0684",
+  "files": [
+    {
+      "path": "browser-font-receipts.json",
+      "sha256": "3a7ccabb19db7be3f38de7adc73ec7e5897f85de93f7d0adbfaa735fc76e8019",
+      "bytes": 2909
+    },
+    {
+      "path": "browser-roman-lf-ttf.png",
+      "sha256": "1cc23ccea7873581791e93aa38641114a47fc37d73dabb0e88ad13cb5baca9ee",
+      "bytes": 65957
+    },
+    {
+      "path": "browser-roman-lf-woff.png",
+      "sha256": "f922b88963977abe0fcf9895efda076a22a1e692084bf50a8aa4b7f86c413655",
+      "bytes": 65798
+    },
+    {
+      "path": "browser-roman-osf-ttf.png",
+      "sha256": "6d53796377356b5ea1c5fd3c75f0a74f9b3a64100b19155613a1ad1a38be7827",
+      "bytes": 65907
+    },
+    {
+      "path": "browser-roman-osf-woff.png",
+      "sha256": "49614719fc50e050046382b170cc41cd3b45778cda5b7a1a55d1198d8c918457",
+      "bytes": 65829
+    },
+    {
+      "path": "linux-first-attempt.log",
+      "sha256": "618d88a6cdaef419ef32c5d5aaffc085806c329c752ceeb1e1f0ea7c0babb795",
+      "bytes": 22325
+    },
+    {
+      "path": "linux-passed-job.log",
+      "sha256": "b27b5936e077c1284553697f572d5f8fc083dde0dc90798fd69b408dd568cadc",
+      "bytes": 29562
+    },
+    {
+      "path": "linux-result.json",
+      "sha256": "e397b037311edad3c8c644f9d32f50b9dfe24d16d01f1e2987159cc83169671f",
+      "bytes": 15035
+    },
+    {
+      "path": "native-roman-lf-all-glyphs.png",
+      "sha256": "1f425260768765e774a4adb3f55207435ab444242481cc78c84a2eae32249fd3",
+      "bytes": 220784
+    },
+    {
+      "path": "native-roman-lf-overlay.png",
+      "sha256": "302bb0d9c1974799b1db11b3f55293a7648996a3b3bf071bf27abe1bca16878f",
+      "bytes": 55441
+    },
+    {
+      "path": "native-roman-osf-all-glyphs.png",
+      "sha256": "5ee9598cf4ddd8eb6cddff35084b5ad11a4e31d3a5b6f44b100a92e62f579884",
+      "bytes": 220168
+    },
+    {
+      "path": "native-roman-osf-overlay.png",
+      "sha256": "51df8301cc8592c574fcd5abb2c30c97465d9334076b7a3884bff06e47f15342",
+      "bytes": 55529
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "f4da914191ad02780d13e0dcf2aa8ed19b1239f939d05f98169907d197011786",
+      "bytes": 2001
+    },
+    {
+      "path": "README.md",
+      "sha256": "fd6701addfc4e3f8bd2b0143c2231279d35b39d9d260b8b1392786df943c2b27",
+      "bytes": 3179
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "7e0e06667980492da0b3d459361c203b29c2c18e933d03043d204b9f791cdad7",
+      "bytes": 2759
+    },
+    {
+      "path": "windows-result.json",
+      "sha256": "33499360d71731827c19dde10158e4e840d6b49d3063cba0bef70684b8ac7df2",
+      "bytes": 4997
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "64a91643b0aff63a321b8901344485794fc87a5fe1698b4372a92902fb3ac409",
+      "bytes": 132
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "platform": "Windows-10-10.0.19045-SP0",
+  "renderer": "Windows GDI GetGlyphOutlineW GGO_GRAY8_BITMAP; exact glyf table identity checked at each size",
+  "sizes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    64,
+    96
+  ],
+  "fonts": [
+    {
+      "family": "et-book-roman-line-figures",
+      "original_sha256": "48a4c0e333ea34f975702a965db80c29bc831f215c3606f47b3fe14f53d0f638",
+      "fixed_sha256": "b88776fc803ba4fbbd96a02b0b4d043f97428c36247e8fdf0c767e5bd84afaa3",
+      "glyphs": 233,
+      "raster_comparisons": 10019,
+      "changed_glyph": "w",
+      "changed_sizes": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        64,
+        96
+      ],
+      "all_other_glyphs_and_advances_unchanged": true,
+      "original_failed_fixed_passed": [
+        {
+          "size": 12,
+          "original_w_top": 6,
+          "v_top": 5,
+          "fixed_w_top": 5
+        },
+        {
+          "size": 17,
+          "original_w_top": 8,
+          "v_top": 7,
+          "fixed_w_top": 7
+        },
+        {
+          "size": 22,
+          "original_w_top": 10,
+          "v_top": 9,
+          "fixed_w_top": 9
+        }
+      ],
+      "20px_w": {
+        "geometry_unchanged": true,
+        "original": {
+          "box": [
+            15,
+            9
+          ],
+          "origin": [
+            0,
+            9
+          ],
+          "advance": [
+            15,
+            0
+          ],
+          "bitmap_sha256": "0a5a9a87195eb8c56dcb24ccf646a279d0a909b5386ea263a4e406131ec63a3a",
+          "coverage_sum": 12245
+        },
+        "fixed": {
+          "box": [
+            15,
+            9
+          ],
+          "origin": [
+            0,
+            9
+          ],
+          "advance": [
+            15,
+            0
+          ],
+          "bitmap_sha256": "823ed2c1d2d351909e46883b9a9b601addc5db9b158f0471523d08bfbd4a78db",
+          "coverage_sum": 12193
+        }
+      }
+    },
+    {
+      "family": "et-book-roman-old-style-figures",
+      "original_sha256": "cd229daa847df81e286943e4da3895df6e186b9379e71d487521fad56cf6a1c0",
+      "fixed_sha256": "b953bb2babd036e1d03aa604007b7b2283cbc32db2bdc5d789f762d916ef4578",
+      "glyphs": 233,
+      "raster_comparisons": 10019,
+      "changed_glyph": "w",
+      "changed_sizes": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        64,
+        96
+      ],
+      "all_other_glyphs_and_advances_unchanged": true,
+      "original_failed_fixed_passed": [
+        {
+          "size": 12,
+          "original_w_top": 6,
+          "v_top": 5,
+          "fixed_w_top": 5
+        },
+        {
+          "size": 17,
+          "original_w_top": 8,
+          "v_top": 7,
+          "fixed_w_top": 7
+        },
+        {
+          "size": 22,
+          "original_w_top": 10,
+          "v_top": 9,
+          "fixed_w_top": 9
+        }
+      ],
+      "20px_w": {
+        "geometry_unchanged": true,
+        "original": {
+          "box": [
+            15,
+            9
+          ],
+          "origin": [
+            0,
+            9
+          ],
+          "advance": [
+            15,
+            0
+          ],
+          "bitmap_sha256": "0a5a9a87195eb8c56dcb24ccf646a279d0a909b5386ea263a4e406131ec63a3a",
+          "coverage_sum": 12245
+        },
+        "fixed": {
+          "box": [
+            15,
+            9
+          ],
+          "origin": [
+            0,
+            9
+          ],
+          "advance": [
+            15,
+            0
+          ],
+          "bitmap_sha256": "823ed2c1d2d351909e46883b9a9b601addc5db9b158f0471523d08bfbd4a78db",
+          "coverage_sum": 12193
+        }
+      }
+    }
+  ]
+}
