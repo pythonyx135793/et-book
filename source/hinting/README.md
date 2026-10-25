@@ -22,7 +22,7 @@ fonts do not contain this faulty instruction sequence and are left intact.
 
 ## Reproduce
 
-Use Python 3.9+ and `fonttools==4.67.0`. Keep an untouched checkout of
+Use Python 3.11+ and `fonttools==4.67.0`. Keep an untouched checkout of
 commit `24d3a3bbfc880095d3df2b9e9d60d05819138e89` in `../et-book-original`.
 From this repository root:
 

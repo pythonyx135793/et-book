@@ -19,15 +19,15 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: 72b467f659d844f5436664243d4e26f168842120
-          fetch-depth: 2
+          ref: 52f0b70f12d3c084355120533a9d046df4bffab0
+          fetch-depth: 3
           persist-credentials: false
       - name: Verify source and prepare isolated tooling
         shell: bash
         run: |
           set -euo pipefail
-          test "$(git rev-parse HEAD)" = 72b467f659d844f5436664243d4e26f168842120
-          test "$(git rev-parse HEAD^{tree})" = eb8d5a68c5396a56a4cdc611011efe0cef3dadaf
+          test "$(git rev-parse HEAD)" = 52f0b70f12d3c084355120533a9d046df4bffab0
+          test "$(git rev-parse HEAD^{tree})" = d4147ec16b604b5a3363cf17ace03250bced4281
           git status --porcelain
           git diff --check
           python3 --version
