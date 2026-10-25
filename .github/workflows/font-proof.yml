@@ -1,0 +1,75 @@
+name: Roman font raster proof
+
+on:
+  push:
+    branches: [codex/proof-windows-font-r1130]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linux-raster:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONNOUSERSITE: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: 72b467f659d844f5436664243d4e26f168842120
+          fetch-depth: 2
+          persist-credentials: false
+      - name: Verify source and prepare isolated tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = 72b467f659d844f5436664243d4e26f168842120
+          test "$(git rev-parse HEAD^{tree})" = eb8d5a68c5396a56a4cdc611011efe0cef3dadaf
+          git status --porcelain
+          git diff --check
+          python3 --version
+          uname -a
+          sha256sum source/hinting/* et-book/et-book-roman-{line,old-style}-figures/*.{ttf,woff,eot}
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, os, subprocess, urllib.request
+          root = Path(os.environ['RUNNER_TEMP']) / 'etbook-proof'
+          root.mkdir()
+          wheels = root / 'wheels'
+          wheels.mkdir()
+          sources = [
+              ('https://files.pythonhosted.org/packages/3d/61/4161946319472aaa9b897bd18ad5108a5b10f5ebaa503d921a001ac4fff9/fonttools-4.67.0-py3-none-any.whl', '4304f03ed7f4ba000a8dcc941ad854bfa52e2f3b6112b8f099b6f431cf98e701'),
+              ('https://files.pythonhosted.org/packages/b6/36/853cad240ec63e21a37a512ee19c896b655ce1772d803a3dd80fccfe63fe/freetype_py-2.5.1-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl', '289b443547e03a4f85302e3ac91376838e0d11636050166662a4f75e3087ed0b'),
+          ]
+          for url, expected in sources:
+              data = urllib.request.urlopen(url, timeout=30).read()
+              assert hashlib.sha256(data).hexdigest() == expected
+              target = wheels / url.rsplit('/', 1)[1]
+              target.write_bytes(data)
+              print('Verified official wheel', target.name, expected)
+          baseline = root / 'original'
+          for family in ['et-book-roman-line-figures', 'et-book-roman-old-style-figures']:
+              for extension in ['ttf', 'woff', 'eot']:
+                  relative = f'et-book/{family}/{family}.{extension}'
+                  data = subprocess.check_output(['git', 'show', '24d3a3bbfc880095d3df2b9e9d60d05819138e89:' + relative])
+                  target = baseline / relative
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(data)
+          PY
+          python3 -m venv "$RUNNER_TEMP/etbook-proof/venv"
+          "$RUNNER_TEMP/etbook-proof/venv/bin/python" -m pip --isolated install --no-index --no-deps --no-cache-dir "$RUNNER_TEMP/etbook-proof/wheels/"*.whl
+      - name: Verify preserved font data and reproducible outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$RUNNER_TEMP/etbook-proof/venv/bin/python" -I -B source/hinting/test_fonts.py "$RUNNER_TEMP/etbook-proof/original" .
+      - name: Compare real FreeType original and fixed rasters
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$RUNNER_TEMP/etbook-proof/venv/bin/python" -I -B source/hinting/test_raster.py "$RUNNER_TEMP/etbook-proof/original" .
+          git diff --exit-code
+          test -z "$(git status --porcelain)"
